@@ -55,3 +55,6 @@ docs/_build/
 # data folder
 data/
 
+# binary data file for word2vec
+*.bin
+
