@@ -2,6 +2,8 @@ using Morsel
 using JSON
 include("word2vec.jl")
 
+print("using ", nprocs(), " threads ...")
+
 app = Morsel.app()
 
 route(app, GET, "/") do req, res
@@ -14,7 +16,8 @@ route(app, GET, "data.json") do req, res
 	q = q == nothing ? "" : q
 	q = lowercase(strip(q))
 	#q = "albert einstein"
-	r = word2vec_tree(q, 20, 2)
+	#r = word2vec_tree(q, 20, 2)
+	r = word2vec_tree_parallel(q, 20, 2)
 	json(r)
 end
 
