@@ -1,6 +1,6 @@
 @everywhere WORD2VEC_PATH = "../word2vec/"
 @everywhere DIST_COMMAND = joinpath(WORD2VEC_PATH, "distance_command")
-@everywhere BIN_FILE = joinpath(WORD2VEC_PATH, "shared-folder-phrase.bin")
+@everywhere BIN_FILE = joinpath(WORD2VEC_PATH, "share-phrase.bin")
 #@everywhere BIN_FILE = joinpath(WORD2VEC_PATH, "vectors-phrase.bin")
 
 @everywhere function word2vec_query(q, n = 40)

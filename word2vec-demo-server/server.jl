@@ -17,7 +17,7 @@ route(app, GET, "data.json") do req, res
 	q = lowercase(strip(q))
 	#q = "albert einstein"
 	#r = word2vec_tree(q, 20, 2)
-	r = word2vec_tree_parallel(q, 20, 2)
+	r = word2vec_tree_parallel(q, 15, 2)
 	json(r)
 end
 
